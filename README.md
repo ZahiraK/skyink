@@ -4,6 +4,24 @@ Draw in the air. SkyInk turns your webcam into a drawing surface using hand trac
 
 Everything runs in the browser with [MediaPipe Hand Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker). No video is uploaded anywhere.
 
+## Live demo
+
+**Try it here: [fancy-elf-3b03ee.netlify.app](https://fancy-elf-3b03ee.netlify.app/)**
+
+Allow camera access, hold your hand up in good light, and pinch to draw. It works on desktop and on phones with a front camera.
+
+<!-- After you record a GIF, save it as docs/demo.gif and uncomment the next line:
+![SkyInk demo](docs/demo.gif)
+-->
+
+## Built with
+
+React 19, Vite, MediaPipe Tasks Vision (hand landmarks), Canvas 2D, deployed on Netlify.
+
+## Privacy
+
+The camera feed is processed locally in your browser by a model that is served with the site. No video, image, or hand data is sent to any server.
+
 ## Quick start
 
 ```bash
@@ -74,6 +92,8 @@ webcam -> <video> -> HandLandmarker.detectForVideo()   (useHandTracking, rAF loo
 - **Self-hosted model and WASM** so the app does not depend on a CDN at runtime.
 
 ## Deploy to Netlify
+
+The live demo above is deployed this way, and it redeploys on every push to `main`.
 
 1. Push this repo to GitHub.
 2. In Netlify: **Add new site -> Import an existing project -> GitHub**, pick the repo.
